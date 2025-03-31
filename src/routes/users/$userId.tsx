@@ -4,9 +4,13 @@ import { fetchUser } from "../../api/users";
 export const Route = createFileRoute("/users/$userId")({
   loader: async ({ params: { userId } }) => {
     // loader which have async fun and pass userId to api fun
+    // await new Promise((resolve) => setTimeout(resolve, 2000));        // testing purpose use for delay loading screen show (pendingComponent)
+    // throw new Error();                                  // testing purpose to check if error throw errorComponent work
     return fetchUser(userId); //api fun call
   },
   component: RouteComponent,
+  pendingComponent: () => <div>...loading</div>, // here we using spinner for loading screen when data not get
+  errorComponent: () => <div>There was an error fetching data...</div>, //here Error component show if api data not get
 });
 
 function RouteComponent() {
