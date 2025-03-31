@@ -19,5 +19,5 @@ export default App;
 // Data Loading
 // Search Params
 // Path Params
-// Code Spliting
+// Code Splitting
 // Not Found Errors
