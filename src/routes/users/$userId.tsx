@@ -28,7 +28,9 @@ function RouteComponent() {
       </div>
       <div>{data.email}</div>
       <div>
-        <Link to={"/users"}>Back to User List</Link>
+        <Link to={"/users"} search={{ page: 2 }}>
+          Back to User List
+        </Link>
       </div>
     </div>
   );

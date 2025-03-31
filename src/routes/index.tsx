@@ -17,7 +17,7 @@ function RouteComponent() {
         <li> Data Loading</li>
         <li> Search Params</li>
         <li> Path Params</li>
-        <li> Code Spliting</li>
+        <li> Code Splitting</li>
         <li>Not Found Errors</li>
       </ul>
     </div>

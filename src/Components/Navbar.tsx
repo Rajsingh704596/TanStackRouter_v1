@@ -9,7 +9,11 @@ const Navbar = () => {
       <Link to="/about" activeProps={{ className: "font-bold" }}>
         About
       </Link>
-      <Link to="/users" activeProps={{ className: "font-bold" }}>
+      <Link
+        to="/users"
+        search={{ page: 2 }} // search object pass page 2
+        activeProps={{ className: "font-bold" }}
+      >
         Users
       </Link>
     </div>

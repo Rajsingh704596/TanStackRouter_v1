@@ -8,9 +8,11 @@ export interface User {
 }
 
 // function that call api get user data
-export const fetchUsers = async () => {
+export const fetchUsers = async (pageNumber: object) => {
   console.log("Fetching users...");
-  const res = (await fetch("https://reqres.in/api/users")).json();
+  const res = (
+    await fetch(`https://reqres.in/api/users?page=${pageNumber}`)
+  ).json();
   return res;
 };
 
